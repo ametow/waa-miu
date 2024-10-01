@@ -1,7 +1,11 @@
-### GET request to retrieve all products
+### GET request to retrieve a product
 GET http://localhost:8080/product
 Accept: application/json
 
-### GET request to retrieve a specific product by ID
+### GET request to retrieve a specific person
 GET http://localhost:8080/person
+Accept: application/json
+
+### GET request to retrieve book collection
+GET http://localhost:8080/books
 Accept: application/json
