@@ -1,0 +1,7 @@
+### GET request to retrieve all products
+GET http://localhost:8080/product
+Accept: application/json
+
+### GET request to retrieve a specific product by ID
+GET http://localhost:8080/person
+Accept: application/json
