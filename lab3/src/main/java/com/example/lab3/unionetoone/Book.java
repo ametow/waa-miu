@@ -2,9 +2,6 @@ package com.example.lab3.unionetoone;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 class Book {
 
