@@ -168,6 +168,7 @@ const App = () => {
                                     <div className="bili-avatar">
                                         <img
                                             className="bili-avatar-img"
+                                            src={item.user.avatar}
                                             alt=""
                                         />
                                     </div>
