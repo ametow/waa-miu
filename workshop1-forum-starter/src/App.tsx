@@ -1,6 +1,6 @@
 import './App.scss'
 import avatar from './images/bozai.png'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 // Comment List data
@@ -73,8 +73,18 @@ type Post = {
 
 const App = () => {
     const [mytabs, setmytabs] = useState(tabs);
-    const [list, setList] = useState<Post[]>(defaultList);
+    const [list, setList] = useState<Post[]>([]);
     const [post, setPost] = useState('');
+
+    async function fetchPosts(){
+        const response = await fetch('http://localhost:3001/posts');
+        const data = await response.json();
+        setList(data);
+    }
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
 
     function toggleNav(v: string) {
         const newTabs = mytabs.map((tab) => {
