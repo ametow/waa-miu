@@ -78,8 +78,8 @@ const App = () => {
 
     async function fetchPosts(){
         const response = await fetch('http://localhost:3001/posts');
-        const data = await response.json();
-        setList(data);
+        const data:Post[] = await response.json();
+        setList(data.sort((a, b) => b.like - a.like));
     }
 
     useEffect(() => {
